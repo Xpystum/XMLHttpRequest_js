@@ -17,23 +17,6 @@ use App\Http\Controllers\IndexController;
 
 Route::controller(IndexController::class)->group(function () {
     Route::get('/', 'index')/*->middleware('test')*/->name('index');
-    Route::get('/logout', 'logout')/*->middleware('test')*/->name('logout');
-    Route::post('/authorisation', 'authorisation')->name('authorisation');
-    Route::get('/contacts', 'contacts')->name('contacts');
-
-    Route::get('/jobs', 'jobs')->name('jobs');
-
-    Route::post('/loadfile', 'loadfile')->name('loadfile');
-
-
-    Route::get('/about', 'about')->name('about');
-    Route::get('/obr', 'obr')->middleware(['email_middleware', 'name_middleware'])->name('obr');
-
-    Route::prefix('category')->group(function () {
-        Route::get('/', 'categories')->name('categories');
-        Route::get('/{alias}', 'category')->name('category');
-    });
-
 });
 
 

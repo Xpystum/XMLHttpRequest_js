@@ -25,12 +25,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'test']);
 
-Route::get('/res', [IndexController::class, 'res']);
-
-Route::get('/collection', [IndexController::class, 'collection']);
-
-Route::post('/test-request', [IndexController::class, 'test_request']);
-
 Route::get('/posts', [IndexController::class, 'posts']);
 
 Route::post('/post-delete', [IndexController::class, 'post_delete']);
+
+Route::put('/post-update', [IndexController::class, 'post_update']);
